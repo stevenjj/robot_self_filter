@@ -13,6 +13,6 @@
       <param name="keep_organized" value="true"/>
       <param name="subsample_value" type="double" value="0.0"/>
       <!-- Change the following line if we want to use a different robot description. Not passing a parameter defaults to "robot_description" -->
-      <param name="robot_description_to_use" value="val_real_robot/robot_description"/>      
+      <!-- param name="robot_description_to_use" value="val_real_robot/robot_description"/-->      
       </node>
 </launch>
