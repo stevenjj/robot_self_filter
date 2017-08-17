@@ -436,9 +436,16 @@ struct LinkInfo
           std::string content;
           boost::shared_ptr<urdf::Model> urdfModel;
 
-          if (nh_.getParam("robot_description", content))
+          ros::NodeHandle nhPriv("~");
+          std::string robot_description_name;
+          nhPriv.param<std::string>("robot_description_to_use", robot_description_name, "robot_description");
+
+          if (nh_.getParam(robot_description_name, content))
           {
             urdfModel = boost::shared_ptr<urdf::Model>(new urdf::Model());
+
+            ROS_INFO("Loaded URDF parameter. Using robot description: %s", robot_description_name.c_str());
+
             if (!urdfModel->initString(content))
             {
               ROS_ERROR("Unable to parse URDF description!");
@@ -446,8 +453,9 @@ struct LinkInfo
             }
           }
           else
-          {
+          {           
             ROS_ERROR("Robot model not found! Did you remap 'robot_description'?");
+            ROS_ERROR("Try specifying which robot_description to use using the 'robot_description_to_use' parameter");
             return false;
           }
           
