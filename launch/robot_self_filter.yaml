@@ -1,0 +1,34 @@
+min_sensor_dist: .2
+self_see_default_padding: .03
+self_see_default_scale: 1.0
+self_see_links:
+  - name: leftForearmLink
+  - name: leftPalm
+  - name: leftIndexFingerPitch1Link
+  - name: leftIndexFingerPitch2Link
+  - name: leftIndexFingerPitch3Link
+  - name: leftMiddleFingerPitch1Link
+  - name: leftMiddleFingerPitch2Link
+  - name: leftMiddleFingerPitch3Link
+  - name: leftPinkyPitch1Link
+  - name: leftPinkyPitch2Link
+  - name: leftPinkyPitch3Link
+  - name: leftThumbPitch1Link
+  - name: leftThumbPitch2Link
+  - name: leftThumbPitch3Link
+  - name: leftThumbRollLink
+  - name: rightForearmLink
+  - name: rightPalm
+  - name: rightIndexFingerPitch1Link
+  - name: rightIndexFingerPitch2Link
+  - name: rightIndexFingerPitch3Link
+  - name: rightMiddleFingerPitch1Link
+  - name: rightMiddleFingerPitch2Link
+  - name: rightMiddleFingerPitch3Link
+  - name: rightPinkyPitch1Link
+  - name: rightPinkyPitch2Link
+  - name: rightPinkyPitch3Link
+  - name: rightThumbPitch1Link
+  - name: rightThumbPitch2Link
+  - name: rightThumbPitch3Link
+  - name: rightThumbRollLink
